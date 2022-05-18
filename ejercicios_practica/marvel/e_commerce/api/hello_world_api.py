@@ -25,8 +25,8 @@ def return_request_data(request):
     print(template)
     return HttpResponse(template)
 
-@csrf_exempt
 @api_view(['GET','POST'])
+@csrf_exempt
 def hello_world_private(request):
     template = '<h1> Hello world Django APIs Private! </h1>'
     return HttpResponse(template)
